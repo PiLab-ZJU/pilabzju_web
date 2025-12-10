@@ -46,17 +46,17 @@
         photo: "pic/teacher_jiang.jpg",
         tags: ["计算社会科学", "政策仿真模拟", "人工智能算法与应用"],
         links: [
-          { text: "📧 Email", url: "mailto:jiangzhuoren@example.com" },
+          { text: "📧 Email", url: "jiangzhuoren@zju.edu.cn" },
           { text: "🌐 Homepage", url: "https://person.zju.edu.cn/0020027#0" },
           { text: "📄 Google Scholar", url: "https://scholar.google.com/citations?user=GNkq4n8AAAAJ" }
         ],
-        bio: "蒋卓人研究员专注于计算社会科学、政策仿真模拟与人工智能算法应用的前沿研究，在相关领域发表多篇高水平论文。",
-        research: "主要研究方向包括：计算社会科学、政策仿真模拟、人工智能算法与应用等。",
-        publications: [
-          "基于深度学习的政策效果预测模型研究, Journal of Computational Social Science, 2024",
-          "政策仿真模拟系统的设计与实现, IEEE Transactions on Systems, 2023"
-        ],
-        education: "XX大学 计算机科学 博士"
+        bio: "蒋卓人，博士，浙江大学“百人计划”研究员，博士生导师。浙江省信息资源管理学会理事、中国人工智能学会青年工作委员会委员；中国中文信息学会青年工作委员会委员，中国中文信息学会信息检索专委会委员、情感计算专委会委员，社会媒体处理专委会通讯委员，广东省医疗行业协会超声医学创新与发展管理分会第一届委员会委员；ACM（国际计算机学会）Professional Member；ACM SIGIR（国际计算机学会信息检索专业组织）Member；ACL （国际计算语言学学会）Member；ASIS&T（国际信息科学与技术学会会员）、CCF（中国计算机学会）会员。通义实验室合作专家，曾任阿里巴巴达摩院语言技术实验室顾问。",
+        research: "主要研究方向包括：计算社会科学、政策仿真模拟、人工智能算法与应用等。"
+        // publications: [
+        //   "基于深度学习的政策效果预测模型研究, Journal of Computational Social Science, 2024",
+        //   "政策仿真模拟系统的设计与实现, IEEE Transactions on Systems, 2023"
+        // ],
+        // education: "XX大学 计算机科学 博士"
       },
       2: {
         name: "言鹏韦",
@@ -186,13 +186,44 @@
       }
 
       const tagsHtml = member.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
-      const linksHtml = member.links.map(link => 
+      // 分离Email和其他链接
+      const emailLink = member.links.find(link => link.text.includes('Email'));
+      const otherLinks = member.links.filter(link => !link.text.includes('Email'));
+      const emailHtml = emailLink ? `<p style="margin: 20px 0 0; color: var(--text-muted); font-size: 15px;"><strong style="color: var(--text);">邮箱：</strong><a href="${emailLink.url}" style="color: var(--primary); text-decoration: none;">${emailLink.url.replace('mailto:', '')}</a></p>` : '';
+      const linksHtml = otherLinks.map(link => 
         `<a href="${link.url}" class="member-link" target="_blank">${link.text}</a>`
       ).join('');
 
-      const publicationsHtml = member.publications.length > 0 
+      const publicationsHtml = member.publications && member.publications.length > 0 
         ? `<ul>${member.publications.map(pub => `<li>${pub}</li>`).join('')}</ul>`
         : '<p>暂无发表论文</p>';
+
+      // 构建内容部分，只显示存在的字段
+      let contentSections = '';
+      
+      if (member.bio) {
+        contentSections += `
+          <div class="content-section">
+            <h3>个人简介</h3>
+            <p>${member.bio}</p>
+          </div>`;
+      }
+      
+      if (member.education) {
+        contentSections += `
+          <div class="content-section">
+            <h3>教育背景</h3>
+            <p>${member.education}</p>
+          </div>`;
+      }
+      
+      if (member.publications && member.publications.length > 0) {
+        contentSections += `
+          <div class="content-section">
+            <h3>发表论文</h3>
+            ${publicationsHtml}
+          </div>`;
+      }
 
       document.getElementById('memberContent').innerHTML = `
         <img src="${member.photo}" alt="${member.name}" class="member-photo-large" 
@@ -201,25 +232,11 @@
           <h1 class="member-name">${member.name}</h1>
           <p class="member-role">${member.role}</p>
           <div class="member-tags">${tagsHtml}</div>
-          <div class="member-links">${linksHtml}</div>
+          ${emailHtml}
+          <div class="member-links" style="margin-top: 16px;">${linksHtml}</div>
         </div>
         <div class="member-content" style="grid-column: 1 / -1;">
-          <div class="content-section">
-            <h3>个人简介</h3>
-            <p>${member.bio}</p>
-          </div>
-          <div class="content-section">
-            <h3>研究方向</h3>
-            <p>${member.research}</p>
-          </div>
-          <div class="content-section">
-            <h3>教育背景</h3>
-            <p>${member.education}</p>
-          </div>
-          <div class="content-section">
-            <h3>发表论文</h3>
-            ${publicationsHtml}
-          </div>
+          ${contentSections}
         </div>
       `;
 
