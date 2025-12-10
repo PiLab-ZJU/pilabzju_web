@@ -15,7 +15,12 @@
       <div class="brand">
         <img src="pic/logo.svg" alt="PI Lab logo">
       </div>
-      <div class="nav-links">
+      <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
         <a href="#research">研究方向</a>
         <a href="#papers">研究成果</a>
         <a href="#members">团队成员</a>
@@ -189,6 +194,25 @@
     
     // 页面加载后创建粒子
     window.addEventListener('load', createParticles);
+    
+    // 移动端菜单切换
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+      
+      // 点击导航链接后关闭菜单
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+    }
     
     // 返回顶部按钮
     const backToTop = document.getElementById('backToTop');
