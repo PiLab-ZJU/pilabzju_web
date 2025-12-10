@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PI Lab - 学术团队</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <img src="pic/logo.svg" alt="PI Lab logo">
+      </div>
+      <div class="nav-links">
+        <a href="#research">研究方向</a>
+        <a href="#papers">研究成果</a>
+        <a href="#members">团队成员</a>
+        <a href="#contact">联系我们</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-particles" id="particles"></div>
+      <div class="hero-content">
+        <h1>探索智能与社会的交汇</h1>
+        <p>PiLabZJU致力于计算社会科学、政策仿真模拟与人工智能算法应用的前沿研究</p>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <h2 class="section-title">研究方向</h2>
+      <p class="section-subtitle">跨学科融合，推动理论创新与实践应用</p>
+      <div class="grid">
+        <div class="card">
+          <h3>计算社会科学</h3>
+          <p>运用计算方法和数据科学工具，研究社会系统的复杂行为模式，探索社会现象背后的规律与机制。</p>
+        </div>
+        <div class="card">
+          <h3>政策仿真模拟</h3>
+          <p>构建基于智能体的仿真模型，模拟政策实施效果，为决策提供科学依据和预测分析。</p>
+        </div>
+        <div class="card">
+          <h3>人工智能算法与应用</h3>
+          <p>研发先进的机器学习与深度学习算法，并将其应用于解决实际社会问题，推动AI技术的落地应用。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="papers">
+      <h2 class="section-title">研究成果</h2>
+      <p class="section-subtitle">最新发表的学术论文</p>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="paper-item">
+          <a href="#" target="_blank">论文标题一：基于深度学习的政策效果预测模型研究</a>
+        </div>
+        <div class="paper-item">
+          <a href="#" target="_blank">论文标题二：计算社会科学中的多智能体仿真框架</a>
+        </div>
+        <div class="paper-item">
+          <a href="#" target="_blank">论文标题三：人工智能在社会治理中的应用与实践</a>
+        </div>
+        <div style="text-align: center;">
+          <a href="papers.html" class="btn-more">查看更多</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="members">
+      <h2 class="section-title">团队成员</h2>
+      <p class="section-subtitle">当前成员</p>
+      <div class="members-grid">
+        <div class="member-card" onclick="window.location.href='member.html?id=1'">
+          <img src="pic/teacher_jiang.jpg" alt="蒋卓人" class="member-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23333%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23fff%22 x=%2250%22 y=%2250%22 text-anchor=%22middle%22 dy=%22.3em%22%3E蒋卓人%3C/text%3E%3C/svg%3E'">
+          <h3 class="member-name">蒋卓人</h3>
+          <p class="member-role">百人计划研究员 | 博士生导师</p>
+          <div class="member-hover-info">研究方向：计算社会科学、政策仿真模拟、人工智能算法与应用</div>
+        </div>
+        <div class="member-card" onclick="window.location.href='member.html?id=2'">
+          <img src="pic/member2.jpg" alt="成员2" class="member-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23333%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23fff%22 x=%2250%22 y=%2250%22 text-anchor=%22middle%22 dy=%22.3em%22%3E成员2%3C/text%3E%3C/svg%3E'">
+          <h3 class="member-name">李四</h3>
+          <p class="member-role">副教授</p>
+          <div class="member-hover-info">研究方向：人工智能算法、机器学习</div>
+        </div>
+        <div class="member-card" onclick="window.location.href='member.html?id=3'">
+          <img src="pic/member3.jpg" alt="成员3" class="member-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23333%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23fff%22 x=%2250%22 y=%2250%22 text-anchor=%22middle%22 dy=%22.3em%22%3E成员3%3C/text%3E%3C/svg%3E'">
+          <h3 class="member-name">王五</h3>
+          <p class="member-role">博士生</p>
+          <div class="member-hover-info">研究方向：政策仿真、数据分析</div>
+        </div>
+        <div class="member-card" onclick="window.location.href='member.html?id=4'">
+          <img src="pic/member4.jpg" alt="成员4" class="member-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23333%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23fff%22 x=%2250%22 y=%2250%22 text-anchor=%22middle%22 dy=%22.3em%22%3E成员4%3C/text%3E%3C/svg%3E'">
+          <h3 class="member-name">赵六</h3>
+          <p class="member-role">硕士生</p>
+          <div class="member-hover-info">研究方向：深度学习、计算机视觉</div>
+        </div>
+        <div class="member-card" onclick="window.location.href='member.html?id=5'">
+          <img src="pic/member5.jpg" alt="成员5" class="member-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23333%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23fff%22 x=%2250%22 y=%2250%22 text-anchor=%22middle%22 dy=%22.3em%22%3E成员5%3C/text%3E%3C/svg%3E'">
+          <h3 class="member-name">孙七</h3>
+          <p class="member-role">硕士生</p>
+          <div class="member-hover-info">研究方向：自然语言处理、知识图谱</div>
+        </div>
+        <div class="member-card" onclick="window.location.href='member.html?id=6'">
+          <img src="pic/member6.jpg" alt="成员6" class="member-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23333%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23fff%22 x=%2250%22 y=%2250%22 text-anchor=%22middle%22 dy=%22.3em%22%3E成员6%3C/text%3E%3C/svg%3E'">
+          <h3 class="member-name">周八</h3>
+          <p class="member-role">硕士生</p>
+          <div class="member-hover-info">研究方向：强化学习、智能决策</div>
+        </div>
+        <div class="member-card" onclick="window.location.href='member.html?id=7'">
+          <img src="pic/member7.jpg" alt="成员7" class="member-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23333%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23fff%22 x=%2250%22 y=%2250%22 text-anchor=%22middle%22 dy=%22.3em%22%3E成员7%3C/text%3E%3C/svg%3E'">
+          <h3 class="member-name">吴九</h3>
+          <p class="member-role">本科生</p>
+          <div class="member-hover-info">研究方向：数据挖掘、社会网络分析</div>
+        </div>
+        <div class="member-card" onclick="window.location.href='member.html?id=8'">
+          <img src="pic/member8.jpg" alt="成员8" class="member-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23333%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23fff%22 x=%2250%22 y=%2250%22 text-anchor=%22middle%22 dy=%22.3em%22%3E成员8%3C/text%3E%3C/svg%3E'">
+          <h3 class="member-name">郑十</h3>
+          <p class="member-role">本科生</p>
+          <div class="member-hover-info">研究方向：算法优化、系统设计</div>
+        </div>
+      </div>
+      
+      <hr class="section-divider">
+      
+      <h2 class="section-title" style="margin-top: 0;">往届成员</h2>
+      <p class="section-subtitle">已毕业成员</p>
+      <div class="members-grid">
+        <div class="member-card no-link">
+          <img src="pic/alumni1.jpg" alt="往届成员1" class="member-photo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23333%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23fff%22 x=%2250%22 y=%2250%22 text-anchor=%22middle%22 dy=%22.3em%22%3E往届1%3C/text%3E%3C/svg%3E'">
+          <h3 class="member-name">汪子航</h3>
+          <p class="member-role">硕士 · 2024</p>
+          <div class="member-hover-info">研究方向：计算社会科学、自然语言处理</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2 class="section-title">联系我们</h2>
+      <p class="section-subtitle">欢迎学术交流与合作</p>
+      <div class="contact-info">
+        <p><strong>邮箱：</strong><a href="mailto:contact@pilab.edu.cn">contact@pilab.edu.cn</a></p>
+        <p><strong>地址：</strong>XX 大学计算机学院 · 创新楼 5F</p>
+        <p><strong>电话：</strong>+86 XXX-XXXX-XXXX</p>
+        <p style="margin-top: 32px; color: var(--text-muted);">我们致力于推动计算社会科学与人工智能的交叉研究，欢迎对相关领域感兴趣的同学和研究者加入我们的团队，或与我们开展学术合作。</p>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" id="backToTop" aria-label="返回顶部">↑</button>
+
+  <script>
+    // 生成粒子效果
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      if (!particlesContainer) return;
+      
+      const particleCount = 30;
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 15 + 's';
+        particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+        particlesContainer.appendChild(particle);
+      }
+    }
+    
+    // 页面加载后创建粒子
+    window.addEventListener('load', createParticles);
+    
+    // 返回顶部按钮
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // 平滑滚动（增强）
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerOffset = 80;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

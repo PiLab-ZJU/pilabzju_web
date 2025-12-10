@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>研究成果 - PI Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <a href="index.html">
+          <img src="pic/logo.svg" alt="PI Lab logo">
+        </a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html#research">研究方向</a>
+        <a href="papers.html">研究成果</a>
+        <a href="index.html#members">团队成员</a>
+        <a href="index.html#contact">联系我们</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1 class="page-title">研究成果</h1>
+    <p class="page-subtitle">学术论文与项目成果</p>
+    
+    <div class="paper-list">
+      <div class="paper-card">
+        <h2 class="paper-title">
+          <a href="#" target="_blank">基于深度学习的政策效果预测模型研究</a>
+        </h2>
+        <p class="paper-authors">张三, 李四, 王五, 等</p>
+        <p class="paper-venue">Journal of Computational Social Science, 2024</p>
+        <div class="paper-links">
+          <a href="#" class="paper-link" target="_blank">📄 PDF</a>
+          <a href="#" class="paper-link" target="_blank">💻 GitHub</a>
+          <a href="#" class="paper-link" target="_blank">📊 Data</a>
+        </div>
+      </div>
+
+      <div class="paper-card">
+        <h2 class="paper-title">
+          <a href="#" target="_blank">计算社会科学中的多智能体仿真框架</a>
+        </h2>
+        <p class="paper-authors">李四, 赵六, 孙七, 等</p>
+        <p class="paper-venue">Proceedings of AAAI, 2024</p>
+        <div class="paper-links">
+          <a href="#" class="paper-link" target="_blank">📄 PDF</a>
+          <a href="#" class="paper-link" target="_blank">💻 GitHub</a>
+          <a href="#" class="paper-link" target="_blank">📊 Data</a>
+        </div>
+      </div>
+
+      <div class="paper-card">
+        <h2 class="paper-title">
+          <a href="#" target="_blank">人工智能在社会治理中的应用与实践</a>
+        </h2>
+        <p class="paper-authors">王五, 周八, 吴九, 等</p>
+        <p class="paper-venue">ACM Conference on Social Computing, 2023</p>
+        <div class="paper-links">
+          <a href="#" class="paper-link" target="_blank">📄 PDF</a>
+          <a href="#" class="paper-link" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+
+      <div class="paper-card">
+        <h2 class="paper-title">
+          <a href="#" target="_blank">政策仿真模拟系统的设计与实现</a>
+        </h2>
+        <p class="paper-authors">张三, 郑十, 陈十一, 等</p>
+        <p class="paper-venue">IEEE Transactions on Systems, 2023</p>
+        <div class="paper-links">
+          <a href="#" class="paper-link" target="_blank">📄 PDF</a>
+          <a href="#" class="paper-link" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+
+      <div class="paper-card">
+        <h2 class="paper-title">
+          <a href="#" target="_blank">社会网络分析中的机器学习方法</a>
+        </h2>
+        <p class="paper-authors">李四, 林十二, 黄十三, 等</p>
+        <p class="paper-venue">NeurIPS Workshop, 2023</p>
+        <div class="paper-links">
+          <a href="#" class="paper-link" target="_blank">📄 PDF</a>
+          <a href="#" class="paper-link" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+
+      <div class="paper-card">
+        <h2 class="paper-title">
+          <a href="#" target="_blank">基于强化学习的智能决策系统</a>
+        </h2>
+        <p class="paper-authors">周八, 刘十四, 等</p>
+        <p class="paper-venue">ICML, 2022</p>
+        <div class="paper-links">
+          <a href="#" class="paper-link" target="_blank">📄 PDF</a>
+          <a href="#" class="paper-link" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="返回顶部">↑</button>
+
+  <script>
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
+
